@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Simple Calculator</title>
+  <link rel="shortcut icon" type="image/jpg" href="img/favicon.png"/>
+  <link href="css/index.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="js/expressionEval.js"></script>
+</head>
+
+<body>
+
+  <h1 style="text-align: center; ">Simple Calculator</h1>
+  <div class="info">
+    <p>This calculator supports evaluating <a href="https://en.wikipedia.org/wiki/Elementary_arithmetic">elementary arithmetic</a> expressions</p>
+    <p>You may enter any expression that incorporates addition(+), subtraction(-), multiplication(*), division(/), and also brackets ( ) </p>
+    <p>Note: The speed of execution is proportional to the size/length of the expression</p>
+    <p>Input Rules: </p>
+    <p>Division by 0 should not occur in the input</p>
+    <p>There can be no two consecutive operators in the input.</p>
+    <p>'+' is not used as a unary operation, that means "+1" and "+(2 + 3)" are invalid expressions.</p>
+    <p>'-' could be used as a unary operation, that means "-1" and "-(2 + 3)" are valid expressions.</p>
+    <p>The sequence of brackets should come in valid pairs, that is the number of opening brackets should match the closing brackets</p>
+    <p>The expression is invalid if, in any part of the expression, number of ')' is greater than the number of '('. For example: (3+7))-9 is invalid</p>
+  </div>
+  <div class="main">
+    <p>Please enter the expression</p>
+    <input type="text" size="50%" id="expression-box">
+    <input type="button" value="Evaluate" onclick="document.getElementById('result').innerHTML=eval(document.getElementById('expression-box').value).toString()">
+  </div>
+  <div class="result">
+    <h3> The result is: </h3>
+    <h3 id="result"></h3>
+  </div>
+
+
+</body>
+
+</html>

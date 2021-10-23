@@ -1,0 +1,13 @@
+.main {
+  display: grid;
+  place-items: center;
+}
+.info {
+  text-align: center;
+}
+.result {
+  display: grid;
+  place-items: center;
+}
+
+
